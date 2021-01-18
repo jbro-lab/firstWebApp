@@ -1,4 +1,6 @@
-﻿function calcgrade() {
+﻿//Justis Brown
+function calcgrade() {
+    //declare variables
     let iAssignmentPoints = Number(document.getElementById("assignments").value);
     let iGpPoints = Number(document.getElementById("gp").value);
     let iQPoints = Number(document.getElementById("q").value);
@@ -12,19 +14,24 @@
     let iTotalPoints = 2000;
     let sLetterGrade;
 
+    //make sure letter grade and final grade are hidden
     document.getElementById("letterGrade").hidden = true;
     document.getElementById("finalGrade").hidden = true;
 
+    //check to see if values are valid
     if (iAssignmentPoints <= 0 || iAssignmentPoints > 1000 || iGpPoints < 0 || iGpPoints > 200
         || iQPoints < 0 || iQPoints > 200 || iExPoints < 0 || iExPoints > 400 || iIntexPoints < 0 || iIntexPoints > 200) {
         alert("Please enter a valid number");
     }
+    //same
     if (Number.isFinite(iAssignmentPoints) == false || Number.isFinite(iGpPoints) == false ||
         Number.isFinite(iQPoints) == false || Number.isFinite(iExPoints) == false || Number.isFinite(iIntexPoints) == false) {
         alert("Please enter a valid number");
     }
+    //calc grade
+    iTotalGrade = ((iAssignmentPoints) + (iGpPoints) + (iQPoints) + (iExPoints) + (iIntexPoints)) / iTotalPoints;
 
-    iTotalGrade = ((iAssignmentPoints ) + (iGpPoints ) + (iQPoints ) + (iExPoints ) + (iIntexPoints ))/iTotalPoints;
+    //find letter grade
     if (iTotalGrade >= 0.94) {
         sLetterGrade = 'A';
     }
@@ -62,6 +69,7 @@
         sLetterGrade = 'E'
     }
 
+    //display grades
     document.getElementById("letterGrade").hidden = false;
     document.getElementById("finalGrade").hidden = false;
     document.getElementById("letterGrade").innerHTML = "Letter Grade: " + sLetterGrade;
