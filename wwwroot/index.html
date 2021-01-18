@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Justis Brown ASP.NET WebApp</title>
+    <link rel="icon" href="img/aztec.png"
+          type="image/x-icon">
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <h1>Justis Brown</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img id="pic" src="img/Resized_20201001_155823.jpeg" />
+        </div>
+        <div class="grid-item">
+            <h3>My Expectations</h3>
+            <p>
+                By the end of this class, I hope to be able to build web applications within a second framework.
+                I hope to be able to program decently in C#. I hope that I'll be able to have the skills needed to get a job in
+                web development or software development.
+            </p>
+        </div>
+        <div class="grid-item">\
+            <h3>Jobs I'm Interested In</h3>
+            <ul>
+                <li>Software Engineer/Developer</li>
+                <li>Web Developer</li>
+                <li>Something to do with Machine Learning</li>
+            </ul>
+        </div>
+    </div>
+    <form>
+
+        <label for="assignments">Assignments (50%): </label><input id="assignments" type="text" placeholder="Enter points 0-1000" /><br />
+        <label for="gp">Group Project (10%): </label><input id="gp" type="text" placeholder="Enter points 0-200" /><br />
+        <label for="q">Quizzes (10%): </label><input id="q" type="text" placeholder="Enter points 0-200" /><br />
+        <label for="ex">Exams (20%): </label><input id="ex" type="text" placeholder="Enter points 0-400" /><br />
+        <label for="INTEX">INTEX (10%): </label><input id="INTEX" type="text" placeholder="Enter points 0-200" /><br />
+        <input type="button" value="Submit" onclick="calcgrade();" />
+    </form>
+
+    <p id="letterGrade" hidden></p>
+    <p id="finalGrade" hidden></p>
+    <script src="js/JavaScript.js"></script>
+</body>
+</html>
