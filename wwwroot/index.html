@@ -40,11 +40,12 @@
         <label for="q">Quizzes (10%): </label><input id="q" type="text" placeholder="Enter points 0-200" /><br />
         <label for="ex">Exams (20%): </label><input id="ex" type="text" placeholder="Enter points 0-400" /><br />
         <label for="INTEX">INTEX (10%): </label><input id="INTEX" type="text" placeholder="Enter points 0-200" /><br />
-        <input type="button" value="Submit" onclick="calcgrade();" />
+        <input type="button" value="Submit" id="Submit" />
     </form>
 
     <p id="letterGrade" hidden></p>
     <p id="finalGrade" hidden></p>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/JavaScript.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 ﻿//Justis Brown
-function calcgrade() {
+$("Submit").click(function () {
     //declare variables
-    let iAssignmentPoints = Number(document.getElementById("assignments").value);
-    let iGpPoints = Number(document.getElementById("gp").value);
-    let iQPoints = Number(document.getElementById("q").value);
-    let iExPoints = Number(document.getElementById("ex").value);
-    let iIntexPoints = Number(document.getElementById("INTEX").value);
+    let iAssignmentPoints = Number($("assignments").value);
+    let iGpPoints = Number($("gp").value);
+    let iQPoints = Number($("q").value);
+    let iExPoints = Number($("ex").value);
+    let iIntexPoints = Number($("INTEX").value);
     let dAssignmentValue = 0.5;
     let dGpValue = 0.1;
     let dQValue = 0.1;
@@ -15,8 +15,8 @@ function calcgrade() {
     let sLetterGrade;
 
     //make sure letter grade and final grade are hidden
-    document.getElementById("letterGrade").hidden = true;
-    document.getElementById("finalGrade").hidden = true;
+    $("letterGrade").hidden = true;
+    $("finalGrade").hidden = true;
 
     //check to see if values are valid
     if (iAssignmentPoints <= 0 || iAssignmentPoints > 1000 || iGpPoints < 0 || iGpPoints > 200
@@ -70,8 +70,8 @@ function calcgrade() {
     }
 
     //display grades
-    document.getElementById("letterGrade").hidden = false;
-    document.getElementById("finalGrade").hidden = false;
-    document.getElementById("letterGrade").innerHTML = "Letter Grade: " + sLetterGrade;
-    document.getElementById("finalGrade").innerHTML = "Final Grade: " + iTotalGrade;
-}
+    $("letterGrade").hidden = false;
+    $("finalGrade").hidden = false;
+    $("letterGrade").innerHTML = "Letter Grade: " + sLetterGrade;
+    $("finalGrade").innerHTML = "Final Grade: " + iTotalGrade;
+});
