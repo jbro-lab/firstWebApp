@@ -1,5 +1,5 @@
 ﻿//Justis Brown
-$("#Submit").click(function () {
+$("form").submit(function () {
     //declare variables
     let iAssignmentPoints = Number($("#assignments").val());
     let iGpPoints = Number($("#gp").val());
@@ -18,7 +18,7 @@ $("#Submit").click(function () {
     $("#letterGrade")[0].hidden = true;
     $("#finalGrade")[0].hidden = true;
 
-    //check to see if values are valid
+    /*//check to see if values are valid
     if (iAssignmentPoints <= 0 || iAssignmentPoints > 1000 || iGpPoints < 0 || iGpPoints > 200
         || iQPoints < 0 || iQPoints > 200 || iExPoints < 0 || iExPoints > 400 || iIntexPoints < 0 || iIntexPoints > 200) {
         alert("Please enter a valid number");
@@ -27,7 +27,7 @@ $("#Submit").click(function () {
     if (Number.isFinite(iAssignmentPoints) == false || Number.isFinite(iGpPoints) == false ||
         Number.isFinite(iQPoints) == false || Number.isFinite(iExPoints) == false || Number.isFinite(iIntexPoints) == false) {
         alert("Please enter a valid number");
-    }
+    }*/
     //calc grade
     iTotalGrade = ((iAssignmentPoints) + (iGpPoints) + (iQPoints) + (iExPoints) + (iIntexPoints)) / iTotalPoints;
 

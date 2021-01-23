@@ -1,0 +1,27 @@
+﻿<!--Justis Brown-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Justis Brown ASP.NET WebApp</title>
+    <link rel="icon" href="~/img/aztec.png"
+          type="image/x-icon">
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <h1>@ViewBag.Title</h1>
+    <menu>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="GradeCalc">Grade Calculator</a></li>
+        </ul>
+    </menu>
+
+    @RenderBody()
+    
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/JavaScript.js"></script>
+</body>
+</html>

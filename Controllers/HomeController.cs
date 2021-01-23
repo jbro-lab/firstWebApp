@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using firstWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,19 @@ namespace firstWebApp.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        [HttpGet("GradeCalc")]
+        public IActionResult GradeCalc()
+        {
+            return View();
+        }
+
+        [HttpPost("GradeCalc")]
+        public IActionResult GradeCalc(GradeCalcModel model)
+        {
+
             return View();
         }
     }
