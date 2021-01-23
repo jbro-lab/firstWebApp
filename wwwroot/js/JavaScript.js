@@ -74,4 +74,13 @@ $("form").submit(function () {
     $("#finalGrade")[0].hidden = false;
     $("#letterGrade")[0].innerHTML = "Letter Grade: " + sLetterGrade;
     $("#finalGrade")[0].innerHTML = "Final Grade: " + iTotalGrade * 100 + "%";
+
+    if (iAssignmentPoints <= 0 || iAssignmentPoints > 1000 || iGpPoints < 0 || iGpPoints > 200
+        || iQPoints < 0 || iQPoints > 200 || iExPoints < 0 || iExPoints > 400 || iIntexPoints < 0 || iIntexPoints > 200) {
+
+    }
+    else {
+        alert("Letter Grade: " + sLetterGrade + "\n" + "Final Grade: " + iTotalGrade.toFixed(2) * 100 + "%");
+    }
+    
 });
