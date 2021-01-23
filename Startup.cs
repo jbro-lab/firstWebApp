@@ -22,8 +22,14 @@ namespace firstWebApp
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseNodeModules();
-            app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseRouting();
+            app.UseEndpoints(cfg =>
+            {
+                cfg.MapControllerRoute("Default",
+                    "{controller}/{action}/{id?}", 
+                    new { controller = "Home", action = "index"});
+            });
         }
     }
 }
